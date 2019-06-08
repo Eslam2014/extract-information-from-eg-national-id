@@ -1,5 +1,5 @@
 
-'''
+"""
                                     Extract Information from Egyptian National ID
                                         ------------------------------------
                                         2 - 990115 - 01 - 0192 - 1
@@ -21,7 +21,7 @@
                                     z(1) number  Ministry of Interior  added it to validate
                                      if the National ID fake or not (1 to 9)
 
-'''
+"""
 
 import argparse
 from datetime import datetime
@@ -149,11 +149,12 @@ def extract_info_from_national_id(national_id: int):
     # last_number = national_id_str[13]
     return info
 
-def print_info(info):
-    print('Birth Century :', info['birth_century'])
-    print('Date Of Birth :', info['date_of_birth'])
-    print('Birth Governorate :', info['birth_governorate'])
-    print('Gender :', info['gender'])
+
+def print_info(information):
+    print('Birth Century :', information['birth_century'])
+    print('Date Of Birth :', information['date_of_birth'])
+    print('Birth Governorate :', information['birth_governorate'])
+    print('Gender :', information['gender'])
 
 
 if __name__ == '__main__':
@@ -172,19 +173,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     info = extract_info_from_national_id(args.national_id)
     print_info(info)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
