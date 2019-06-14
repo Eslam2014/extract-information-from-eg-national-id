@@ -93,7 +93,6 @@ class EgyptionNationalId(_ENID):
     @classmethod
     def parse_str(cls, national_id):
         if len(national_id) != 14 or national_id.isdigit() is False:
-            print("Hi there")
             raise ValidationError('National id format not valid', cls.fake_national_id_message)
         birth_century = cls.__get_birth_century(cls,int(national_id[0]))
         date_of_birth = cls.__convert_birthdate(cls ,national_id[0:7])
