@@ -20,6 +20,6 @@ e.g. national id is 14 digit ex(29501023201952) it could divide as described bel
 * `z(1)` number  Ministry of Interior added it to validate if the National ID fake or not (1 to 9)
 
 ## Requirements
-python version >= 3.5
+python version >= 2.7
 ## `usage: extractor.py [-h] national_id`
 
